@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FilmLibrary.controllers.MainBorderPaneControllers">
+   <top>
+      <VBox prefHeight="46.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <fx:include source="MainMenu.fxml" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="%titlePL" />
+                  <Label text="%titleEN" />
+                  <Label text="%category" />
+                  <Label text="%firstShown" />
+                  <Label text="%country" />
+                  <Label text="%director" />
+                  <Label text="%evaluation" />
+               </children>
+            </VBox>
+            <VBox prefHeight="262.0" prefWidth="365.0" spacing="2.0">
+               <children>
+                  <TextField fx:id="titlePLTextField" prefHeight="25.0" prefWidth="344.0" />
+                  <TextField fx:id="titleENTextField" />
+                  <TextField fx:id="categoryTextField" />
+                  <DatePicker fx:id="firstShownTextField" />
+                  <TextField fx:id="countryTextField" />
+                  <TextField fx:id="directorTextField" />
+                  <TextField fx:id="evaluationTextField" />
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <bottom>
+      <VBox prefHeight="63.0" prefWidth="509.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="335.0" spacing="15.0">
+               <children>
+                  <ComboBox fx:id="titlePLComboBox" onAction="#comboBoxOnAction" prefWidth="150.0" promptText="%listOfFilmPL" />
+                  <Button fx:id="editFilm" mnemonicParsing="false" onAction="#editFilmOnAction" text="%edit" />
+                  <Button fx:id="addFilm" mnemonicParsing="false" onAction="#addFilmOnAction" text="%add" />
+                  <Button fx:id="deleteFilm" mnemonicParsing="false" onAction="#deleteFilmOnAction" text="%delete" />
+               </children>
+            </HBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%information1">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%information2" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+</BorderPane>

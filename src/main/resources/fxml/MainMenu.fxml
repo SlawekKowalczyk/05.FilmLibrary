@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<MenuBar xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FilmLibrary.controllers.MainMenuController">
+  <menus>
+    <Menu mnemonicParsing="false" text="%file">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#closeApplicationOnAction" text="%close" />
+      </items>
+    </Menu>
+      <Menu mnemonicParsing="false" text="%view">
+        <items>
+            <RadioMenuItem mnemonicParsing="false" onAction="#setCaspianOnAction" text="%caspian">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleGropu" />
+               </toggleGroup></RadioMenuItem>
+            <RadioMenuItem mnemonicParsing="false" onAction="#setModenaOnAction" text="%modena" toggleGroup="$toggleGropu" />
+        </items>
+    </Menu>
+    <Menu mnemonicParsing="false" text="%help">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#aboutOnAction" text="%about" />
+      </items>
+    </Menu>
+  </menus>
+</MenuBar>
