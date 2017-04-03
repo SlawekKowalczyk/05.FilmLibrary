@@ -13,9 +13,11 @@ public class CategoryFx {
     private IntegerProperty id = new SimpleIntegerProperty();
     private StringProperty namePL = new SimpleStringProperty();
     private StringProperty nameEN = new SimpleStringProperty();
-    private StringProperty gatunek = new SimpleStringProperty();
-    private IntegerProperty rokProdukcji = new SimpleIntegerProperty();
-    private StringProperty ocena = new SimpleStringProperty();
+    private StringProperty category = new SimpleStringProperty();
+    private IntegerProperty firstShown = new SimpleIntegerProperty();
+    private StringProperty country = new SimpleStringProperty();
+    private StringProperty director = new SimpleStringProperty();
+    private StringProperty evaluation = new SimpleStringProperty();
 
     public int getId() {
         return id.get();
@@ -53,40 +55,64 @@ public class CategoryFx {
         this.nameEN.set(nameEN);
     }
 
-    public String getGatunek() {
-        return gatunek.get();
+    public String getCategory() {
+        return category.get();
     }
 
-    public StringProperty gatunekProperty() {
-        return gatunek;
+    public StringProperty categoryProperty() {
+        return category;
     }
 
-    public void setGatunek(String gatunek) {
-        this.gatunek.set(gatunek);
+    public void setCategory(String category) {
+        this.category.set(category);
     }
 
-    public int getRokProdukcji() {
-        return rokProdukcji.get();
+    public int getFirstShown() {
+        return firstShown.get();
     }
 
-    public IntegerProperty rokProdukcjiProperty() {
-        return rokProdukcji;
+    public IntegerProperty firstShownProperty() {
+        return firstShown;
     }
 
-    public void setRokProdukcji(int rokProdukcji) {
-        this.rokProdukcji.set(rokProdukcji);
+    public void setFirstShown(int firstShown) {
+        this.firstShown.set(firstShown);
     }
 
-    public String getOcena() {
-        return ocena.get();
+    public String getCountry() {
+        return country.get();
     }
 
-    public StringProperty ocenaProperty() {
-        return ocena;
+    public StringProperty countryProperty() {
+        return country;
     }
 
-    public void setOcena(String ocena) {
-        this.ocena.set(ocena);
+    public void setCountry(String country) {
+        this.country.set(country);
+    }
+
+    public String getDirector() {
+        return director.get();
+    }
+
+    public StringProperty directorProperty() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director.set(director);
+    }
+
+    public String getEvaluation() {
+        return evaluation.get();
+    }
+
+    public StringProperty evaluationProperty() {
+        return evaluation;
+    }
+
+    public void setEvaluation(String evaluation) {
+        this.evaluation.set(evaluation);
     }
 
     @Override

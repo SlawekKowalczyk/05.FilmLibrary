@@ -37,18 +37,18 @@ public class CategoryModel {
 
 
     public void saveCategoryInDataBase(String namePL, String nameEN,
-                                       String gatunek, String rokProdukcji,
-                                       String kraj,String rezyser, int ocena) throws ApplicationException {
+                                       String gatunek, String firstShown,
+                                       String country,String director, int evaluation) throws ApplicationException {
 
         CategoryDao categoryDao = new CategoryDao(DbManager.getConnectionSource());
         Category category = new Category();
         category.setNamePL(namePL);
         category.setNameEN(nameEN);
         category.setCategory(gatunek);
-        category.setFirstShown(rokProdukcji);
-        category.setCountry(kraj);
-        category.setDirector(rezyser);
-        category.setEvaluation(ocena);
+        category.setFirstShown(firstShown);
+        category.setCountry(country);
+        category.setDirector(director);
+        category.setEvaluation(evaluation);
         categoryDao.creatOrUpdate(category);
 
         DbManager.closeConnectionSource();

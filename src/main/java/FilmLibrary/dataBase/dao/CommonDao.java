@@ -32,26 +32,6 @@ public abstract class CommonDao {
         }
     }
 
-//    public <T extends BaseModel, I> void refresh(BaseModel baseModel) throws ApplicationException {
-//        try {
-//            Dao<T, I> dao = getDao((Class<T>) baseModel.getClass());
-//            dao.refresh((T) baseModel);
-//        } catch (SQLException e) {
-//            LOGGER.error(e.getCause().getMessage());
-//            throw new ApplicationException((FxmlUtils.getResourceBundle().getString("error.refresh")));
-//        }
-//    }
-//
-//    public <T extends BaseModel, I> void delete(BaseModel baseModel) throws ApplicationException {
-//        try {
-//            Dao<T, I> dao = getDao((Class<T>) baseModel.getClass());
-//            dao.delete((T) baseModel);
-//        } catch (SQLException e) {
-//            LOGGER.error(e.getCause().getMessage());
-//            throw new ApplicationException(FxmlUtils.getResourceBundle().getString("error.delete"));
-//        }
-//    }
-
     public <T extends BaseModel, I> void deleteById(Class<T> cls, Integer id) throws ApplicationException {
         try {
             Dao<T, I> dao = getDao(cls);
@@ -91,9 +71,4 @@ public abstract class CommonDao {
             throw new ApplicationException(FxmlUtils.getResourceBundle().getString("error.get.dao"));
         }
     }
-
-//    public <T extends BaseModel, I> QueryBuilder<T, I> getQueryBuilder(Class<T> cls) throws ApplicationException {
-//        Dao<T, I> dao = getDao(cls);
-//        return dao.queryBuilder();
-//    }
 }
