@@ -43,6 +43,25 @@
     </build>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-graphics -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>12-ea+13</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx.controls -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx.controls</artifactId>
+            <version>11.0.0-ea1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>12-ea+13</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.j256.ormlite/ormlite-jdbc -->
         <dependency>
             <groupId>com.j256.ormlite</groupId>
